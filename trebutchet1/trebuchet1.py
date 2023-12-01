@@ -39,6 +39,7 @@ def get_first_valid(i: int, line: str):
 with open("codes.txt") as file:
     data = file.read().lower().splitlines()
     lines: List[str] = []
+    # Preprocess lines by replacing first and last worded number with an actual (still text) number
     for line in data:
         # Replace first worded number from the front
         for i in range(len(line)):
