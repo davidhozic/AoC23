@@ -10,7 +10,7 @@ def is_adjacent_to_star(data: list[list[str]], row: int, column: int) -> tuple[i
         for coff in range(-1, 2):
             with suppress(IndexError):
                 c = data[row + roff][column + coff]
-                if not c.isnumeric()  and c == '*':
+                if c == '*':
                     return (row + roff, column + coff)
 
     return False
