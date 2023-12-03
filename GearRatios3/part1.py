@@ -31,7 +31,7 @@ for row in range(len(fdata)):
             if is_adjacent_to_char(fdata, row, column):
                 was_adjecent = True
 
-        else:
+        elif nbuffer:
             if was_adjecent:
                 was_adjecent = False
                 sum_adjacent += int(''.join(nbuffer))
